@@ -284,7 +284,6 @@ function onPlayerReady(event) {
 
 //Youtube video states
 function onPlayerStateChange(event) {
-  console.log(event.data);
   if (event.data == YT.PlayerState.ENDED) { // If video ended, and after 10 seconds was not closed pop up, start next video
     setTimeout(() => {
       if (isModalOpened === false) {
