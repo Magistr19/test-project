@@ -1,0 +1,85 @@
+.partner-card {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 245px;
+  padding-top: 16px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: $white;
+  border-right: 1px solid $grey;
+}
+
+.partner-card__image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 211px;
+  height: 89px;
+  margin-right: auto;
+  margin-bottom: 17px;
+  margin-left: auto;
+  overflow: hidden;
+}
+
+.partner-card__image {
+  line-height: 1px;
+}
+
+.partner-card__title {
+  @include h-reset;
+
+  margin-bottom: 8px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.partner-card__description {
+  @include p-reset;
+
+  margin-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+
+  text-align: center;
+}
+
+.partner-card__watch-video {
+  position: relative;
+
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: 19px;
+  margin-left: -10px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: $blue;
+  text-decoration: none;
+
+  transition: color 0.3s ease-in, opacity 0.3s ease-in;
+
+  &:hover, &:focus {
+    color: lighten($blue, 20%);
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &::after {
+    content: " \203A";
+    position: absolute;
+
+    margin-left: 3px;
+
+    font-size: 20px;
+    line-height: 18px;
+  }
+}

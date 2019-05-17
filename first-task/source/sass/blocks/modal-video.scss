@@ -1,0 +1,61 @@
+.modal-video {
+  position: fixed;
+  top: calc(50% - 180px);
+  left: 50%;
+  z-index: 2;
+
+  display: none;
+  width: 100%;
+  max-width: 640px;
+  height: 360px;
+
+  background-color: #f6cc8b;
+  transform: translateX(-50%);
+}
+
+.modal-video--show {
+  display: block;
+}
+
+.modal-video__close {
+  @include btn-reset;
+
+  position: absolute;
+  top: -20px;
+  right: 0;
+
+  width: 13px;
+  height: 13px;
+
+  cursor: pointer;
+
+  transition: opacity 0.3s ease-in;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -1px;
+
+    width: 16px;
+    height: 2px;
+
+    background-color: $white;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
